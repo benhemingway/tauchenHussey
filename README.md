@@ -14,5 +14,5 @@ Load it by:
 
     using Distributions
 
-This code is a translation of the code by Martin Floden of Stockholm School of Economics. It can be found in: http://www2.hhs.se/personal/floden/CODE/tauchenhussey.m (Note that it has a mistake in the gausshermite loop (floor function)
+This code is a translation of the code by Martin Floden of Stockholm School of Economics. It can be found in: http://www2.hhs.se/personal/floden/CODE/tauchenhussey.m (Note that it has a mistake in the gausshermite loop (floor function has wrong parentheses).
 
