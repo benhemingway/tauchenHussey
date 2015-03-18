@@ -1,11 +1,11 @@
 # Tauchen-Hussey Discretization of an AR(1)
 
 
-This function computes a n-dimensional discrete approximation to the AR(1) Auto Regressive Stochastic Process
+This function computes a n-dimensional discrete approximation to the AR(1) Auto Regressive Stochastic Process:
 
     y_t = (1-rho)*mmu + rho*y_{t-1} + epsilon_t
   
-where epsilon is normally distributed mean 0 and standard deviation sigma. This is done using Tauchen and Hussey (1991)'s algorithm.
+where epsilon is normally distributed mean 0 and standard deviation sigma. This is done using Tauchen and Hussey (1991)'s algorithm in Julia.
 
 Note: you need the Distributions package.  If you don't already have it, install it by
 
