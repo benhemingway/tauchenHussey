@@ -10,9 +10,10 @@ where epsilon is normally distributed mean 0 and standard deviation sigma. This 
 Note: you need the Distributions package.  If you don't already have it, install it by
 
     Pkg.add("Distributions")
-Load it by:
+Load the package and the function provided here:
 
     using Distributions
+    include("tauchenHussey.jl")
 
 Then, to use this function with a zero mean AR(1) (mmu = 0) with an n-dimensional discretization:
 
