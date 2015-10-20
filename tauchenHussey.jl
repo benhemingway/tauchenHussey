@@ -33,7 +33,14 @@
 
 
 function tauchenHussey(n::Int64,rho::Float64,sigma::Float64;mmu::Float64=0.0) # 
-											# 
+	
+	if n < 2
+		error("Only intended for at least n>2 nodes")
+	elseif rho < -1 || rho > 1
+		error("The process needs to be covariance stationary")
+	else if sigma < 0
+		error("Provided a negative standard deviation for the epsilon")
+	end
 	
 	transition = Array(Float64,n,n)
 
