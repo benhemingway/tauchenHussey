@@ -4,7 +4,7 @@
 # 	approximation to the AR(1) Auto Regressive Stochastic Process
 #
 #	y_t = (1-rho)*mu + rho*y_{t-1} + epsilon_t
-#   
+#
 #	where epsilon is normally distributed mean 0 and standard deviation sigma.
 #   This is done using Tauchen and Hussey (1991)'s algorithm.
 #
@@ -25,23 +25,23 @@
 #					from state i to state j.
 #
 #	Reference: http://www.fperri.net/TEACHING/macrotheory08/numerical.pdf
-#   
+#
 #   This code is a translation of the code by Martin Floden of Stockholm School of Economics
 #   It can be found in: http://www2.hhs.se/personal/floden/CODE/tauchenhussey.m (Note that it has a mistake in the gausshermite loop (floor function)
 ####################
 
 
 
-function tauchenHussey(n::Int64,rho::Float64,sigma::Float64;mmu::Float64=0.0) # 
-	
+function tauchenHussey(n::Int64,rho::Float64,sigma::Float64;mmu::Float64=0.0) #
+
 	if n < 2
 		error("Only intended for at least n>2 nodes")
 	elseif rho < -1 || rho > 1
 		error("The process needs to be covariance stationary")
-	else if sigma < 0
+	elseif sigma < 0
 		error("Provided a negative standard deviation for the epsilon")
 	end
-	
+
 	transition = Array(Float64,n,n)
 
 	w = 0.5 + rho/4
@@ -87,7 +87,7 @@ function qnwnorm1(n)
 
 	maxit = 100;
 	pim4 = 1/pi^.25
-	m = floor((n+1)/2)
+	m = floor(Int64,(n+1)/2)
 	x = zeros(n,1)
 	w = zeros(n,1)
 	z = 1.0; pp = 1.0;
