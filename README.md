@@ -23,7 +23,7 @@ If you want the process to have a mean different from zero for a normal distrubu
 
     y,transition = tauchenHussey(n,rho,sigma,mmu = avg)
 
-Since this is intended to map a log-normal AR(1) process, to make it follow a log normal distribution with mean mmu, you need to take the exponential of the nodes:
+Since this is intended to map a normal distribution AR(1) process, to make it follow a log normal distribution with mean mmu, you need to take the exponential of the nodes:
 
     y = exp(y)
 
